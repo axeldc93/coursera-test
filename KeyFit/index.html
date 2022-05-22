@@ -5,15 +5,40 @@
         <meta http-equiv="X-UA-compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Axel De Clerck">
+        <script src="https://unpkg.com/feather-icons"></script>
         <title>Axel fitness app</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
-          <ul class="navbar-nav px-3">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand mx-3" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/K-logo.png" width="30" height="30" alt="">
+            KeyFit
+          </a>
+          <button class="navbar-toggler px-3" type="button" data-toggle="collapse" data-target="#CollapsableNav" aria-controls="CollapsableNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="CollapsableNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Coming soon</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled d-md-none" href="#">Profile</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="navbar-nav px-3 d-none d-md-block" id="UncollapsedNav">
             <li class="nav-item text-nowrap">
               <a class="nav-link" href="#">Sign out</a>
             </li>
@@ -21,8 +46,8 @@
         </nav>
     
         <div class="container-fluid">
-          <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="row pt-4">
+            <nav class="col-md-2 col-lg-2 d-none d-md-block bg-light sidebar">
               <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                   <li class="nav-item">
@@ -33,38 +58,20 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      <span data-feather="file"></span>
-                      Orders
+                      <span data-feather="activity"></span>
+                      Long-term progress
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      <span data-feather="shopping-cart"></span>
-                      Products
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="users"></span>
-                      Customers
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="bar-chart-2"></span>
-                      Reports
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="layers"></span>
-                      Integrations
+                      <span data-feather="trending-up"></span>
+                      Fitness trend
                     </a>
                   </li>
                 </ul>
     
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                  <span>Saved reports</span>
+                  <span>Training plan</span>
                   <a class="d-flex align-items-center text-muted" href="#">
                     <span data-feather="plus-circle"></span>
                   </a>
@@ -73,32 +80,20 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">
                       <span data-feather="file-text"></span>
-                      Current month
+                      Objectives
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
                       <span data-feather="file-text"></span>
-                      Last quarter
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
-                      Social engagement
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
-                      Year-end sale
+                      Calendar
                     </a>
                   </li>
                 </ul>
               </div>
             </nav>
     
-            <div class="container main col-md-9 ml-sm-auto col-lg-10 px-4">
+            <main role="main" class="col-md-10 ml-sm-auto col-lg-10 pt-3 px-4 d-none d-md-block">
               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
@@ -115,9 +110,14 @@
 
 
     <!-- jQuery (Bootstrap JS plugins depend on it)-->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jscript.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/script.js"></script> 
+    
+    <script>
+      feather.replace()
+    </script>
+
     
 
     </body>
