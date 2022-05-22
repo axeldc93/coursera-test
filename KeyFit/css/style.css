@@ -84,8 +84,12 @@ body {
    * Navbar
    */
   
+   .navbar{
+      padding-top: 1rem;
+   }
+
   .navbar-brand {
-    padding-top: 1rem;
+    padding-top:1rem;
     padding-bottom: .9rem;
     font-size: 1rem;
     text-align: center;
@@ -97,4 +101,7 @@ body {
     text-align: left;
   }
   
+  #CollapsedList{
+    padding-left: 50px;
+  }
  
