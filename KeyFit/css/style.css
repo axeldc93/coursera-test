@@ -1,7 +1,7 @@
 /*** Baseline styles ***/
 
 body {
-    font-size: .875rem;
+    font-size: 1rem;
   }
   
   .feather {
@@ -10,98 +10,265 @@ body {
     vertical-align: text-bottom;
   }
   
-  /*
-   * Sidebar
-   */
-  
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: 50px 0 0; /* Height of navbar */
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-  }
-  
+/*
+  * Sidebar
+  */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 50px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: .5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    position: -webkit-sticky;
+    position: sticky;
   }
-  
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
-    .sidebar-sticky {
-      position: -webkit-sticky;
-      position: sticky;
-    }
-  }
-  
-  .sidebar .nav-link {
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
-  }
-  
-  .sidebar .nav-link.active {
-    color: #007bff;
-  }
-  
-  .sidebar .nav-link:hover .feather,
-  .sidebar .nav-link.active .feather {
-    color: inherit;
-  }
-  
-  .sidebar-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
-  
-  /*
-   * Content
-   */
-  
-    div.container {
-    padding-top: 48px; /* Space for fixed navbar */
-  }
+}
 
-  main.col-md-10, main.col-lg-10{
-    position: absolute;
-    right:0;
-    z-index: 100; /* Same as sidebar, behind the navbar */
-    padding: 50px 0 0; /* Height of navbar */
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-  }
-  
-  /*
-   * Navbar
-   */
-  
-   .navbar{
-      padding-top: 1rem;
-   }
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
 
-  .navbar-brand {
-    padding-top:1rem;
-    padding-bottom: .9rem;
-    font-size: 1rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
-  }
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
 
-  .navbar-brand.col-md-1 {
-    text-align: left;
+.sidebar .nav-link.active {
+  color: #054882;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+#KeyFitCopyright {
+color:#999;
+width: 100%;
+position: absolute;
+bottom: 0;
+text-align: center;
+margin-bottom: 10px;
+margin-right: auto; 
+margin-left: auto;
+
+}
+
+/*
+* Navbar
+*/
+
+.navbar{
+  padding-top: 1rem;
+  border-bottom: 5px solid #58093d;
+  background: white;
+}
+
+.navbar-brand {
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  padding-left: 16px;
+  font-size: 1rem;
+  text-align: center;
+  background: none;
+  width: calc((100%/6));
+}
+
+
+#CollapsedList{
+  padding-left: 50px;
+}
+
+@media (min-width:768px) {
+  .navbar #CollapsedList {
+    padding-left: 0; /* only takes out the padding in the large view and keeps it in the drop-down list */
   }
-  
-  #CollapsedList{
-    padding-left: 50px;
-  }
- 
+}
+
+.navbar .navbar-brand h4 { /*Name of the Brand*/
+  color: black;
+  height: 100%;
+  size: 1.125 rem;
+  margin: auto 0 auto;
+}
+
+.navbar .navbar-collapse .navbar-nav a h5  { /*Navbar items*/
+  color: black;
+  height: 100%;
+  size: 1.125 rem;
+  margin: auto 0 auto;
+}
+
+.navbar .navbar-toggler-icon {
+  background-color: #58093d;
+}
+
+#UncollapsedNav {
+  padding-left: 1rem;
+  padding-right: 24px; /* Same as main body */
+}
+#UncollapsedNav img {
+  Width:45px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+#UncollapsedNav .dropdown-menu {
+  margin-right: 24px;
+  margin-top: 5px;
+}
+
+
+
+/*
+* Main content
+*/
+
+main.col-md-10, main.col-lg-10{
+  position: absolute;
+  right:0;
+  z-index: 100; /* Same as sidebar, behind the navbar */
+  padding: 50px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  overflow-x: hidden;
+}
+
+/*
+* Cards for main content
+* Three types of cards: Alert (KeyFit pushed messages), Simple (One info per card), Multi (multiple info per card)
+*/
+
+/*
+* Generic KeyFit cards setup
+*/
+
+.KeyFit-Card{
+  position: relative;
+  align-items: center;
+  width:100%;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  border-radius: 10px;
+}
+
+.KeyFit-Card #Card-dismiss {
+  width: 100%;
+  height: 20px;
+}
+.KeyFit-Card #Card-dismiss .feather {
+  position: absolute;
+  right: 5px;
+}
+
+/*
+* Alert cards
+*/
+.Alert-Card{
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 5px 5px 10px;
+  background: linear-gradient(90deg, rgba(36,99,153,1) 0%, rgba(5,72,130,1) 35%, rgba(2,0,36,1) 100%);
+  color: white;
+  align-items: center;
+  overflow: hidden;
+  max-height: 100px;
+}
+.Alert-Card h4{
+  font-size: large;
+  font-weight: 600;
+}
+
+.Alert-Card h6{
+  font-size: medium;
+  font-weight: 400;
+}
+.Alert-Card .btn{
+  font-size: medium;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 25%;
+  right: 10px;
+}
+
+
+/*
+* Athlete cards
+*/
+
+.Athlete-Card{
+  border-radius: 10px;
+  padding: 10px 5px 5px 10px;
+  background: rgb(241, 240, 240);
+  color: black;
+}
+.Athlete-Card h4{
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.Athlete-Card h6{
+  font-size: larger;
+  font-weight: 500;
+}
+
+.Athlete-Card .Activity .ActivityType{
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline;
+}
+.Athlete-Card .Activity .ActivityName{
+  font-weight: 500;
+  display: inline;
+}
+.Athlete-Card .Activity .ActivityDetails{
+  font-weight: 400;
+  display: block;
+  font-size: .875rem;
+  opacity: 80%;
+}
+.Athlete-Card .Activity .feather .swim{
+  stroke:#054882;
+  width: 24px;
+  height: 24px;
+}
+.Athlete-Card .Activity .feather .bike{
+  stroke:#58093d;
+  width: 24px;
+  height: 24px;
+}
+.Athlete-Card .Activity .feather .run{
+  stroke:#2c6b53;
+  width: 24px;
+  height: 24px;
+}
+
+/*
+* Commands for specific screen sizes
+*/
+
