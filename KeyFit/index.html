@@ -20,7 +20,8 @@
     <!-- KeyFit CSS -->
     <link rel="stylesheet" href="css/Keyfit_styles.css">
 
-    <!-- Feather icons -->
+    <!-- Icons libraries -->
+    <script src="https://kit.fontawesome.com/0d05820b12.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 
 </head>
@@ -38,9 +39,10 @@
                 <div class="content__wrap">
 
                     <!-- Page title and information -->
-                    <h1 class="page-title mb-2">Dashboard</h1>
+                    <p>Thursday, May 25, 2022</p>
+                    <h1 class="page-title mb-2">Hello, Axel</h1>
                     <h2 class="h5">Welcome back to the Dashboard.</h2>
-                    <p>Scroll down to get some insights<br> Enjoy.</p>
+                    <p>Go to the settings to personalize this dashboard.<br>Enjoy.</p>
                     <!-- END : Page title and information -->
 
                 </div>
@@ -59,22 +61,22 @@
                                     </div>
                                     <div class="toolbar-end">
                                         <button type="button" class="btn btn-icon btn-sm btn-hover btn-light" aria-label="Refresh Network Chart">
-                                            <i class="demo-pli-repeat-2 fs-5"></i>
+                                            <i data-feather="home"></i>
                                         </button>
                                         <div class="dropdown">
                                             <button class="btn btn-icon btn-sm btn-hover btn-light" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Network dropdown">
-                                                <i class="demo-pli-dot-horizontal fs-4"></i>
+                                                <i class="fa-solid fa-house"></i>
                                                 <span class="visually-hidden">Toggle Dropdown</span>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
                                                 <li>
                                                     <a href="#" class="dropdown-item">
-                                                        <i class="demo-pli-pen-5 fs-5 me-2"></i> Edit Date
+                                                        <i class="fa-solid fa-house"></i> Edit Date
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-item">
-                                                        <i class="demo-pli-refresh fs-5 me-2"></i> Refresh
+                                                        <i class="fa-solid fa-house"></i> Refresh
                                                     </a>
                                                 </li>
                                                 <li>
@@ -82,12 +84,12 @@
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-item">
-                                                        <i class="demo-pli-file-csv fs-5 me-2"></i> Save as CSV
+                                                        <i class="fa-solid fa-house"></i> Save as CSV
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-item">
-                                                        <i class="demo-pli-calendar-4 fs-5 me-2"></i> View Details
+                                                        <i class="fa-solid fa-house"></i> View Details
                                                     </a>
                                                 </li>
                                             </ul>
@@ -353,246 +355,12 @@
                     <!-- Content Header - Right Side: -->
                     <div class="header__content-end">
 
-                        <!-- Mega Dropdown -->
-                        <div class="dropdown">
-
-                            <!-- Toggler -->
-                            <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Megamenu dropdown" aria-expanded="false">
-                                <i class="demo-psi-layout-grid"></i>
-                            </button>
-
-                            <!-- Mega Dropdown Menu -->
-                            <div class="dropdown-menu dropdown-menu-end p-3 mega-dropdown">
-                                <div class="row">
-                                    <div class="col-md-3">
-
-                                        <!-- Pages List Group -->
-                                        <div class="list-group list-group-borderless">
-                                            <div class="list-group-item d-flex align-items-center border-bottom mb-2">
-                                                <div class="flex-shrink-0 me-2">
-                                                    <i class="demo-pli-file fs-4"></i>
-                                                </div>
-                                                <h5 class="flex-grow-1 m-0">Pages</h5>
-                                            </div>
-                                            <a href="#" class="list-group-item list-group-item-action">Profile</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Search Result</a>
-                                            <a href="#" class="list-group-item list-group-item-action">FAQ</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Screen Lock</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Maintenance</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Invoices</a>
-                                            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Disabled Item</a>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-3">
-
-                                        <!-- Mailbox list group -->
-                                        <div class="list-group list-group-borderless mb-3">
-                                            <div class="list-group-item d-flex align-items-center border-bottom mb-2">
-                                                <div class="flex-shrink-0 me-2">
-                                                    <i class="demo-pli-mail fs-4"></i>
-                                                </div>
-                                                <h5 class="flex-grow-1 m-0">Mailbox</h5>
-                                            </div>
-                                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                                Inbox <span class="badge bg-danger rounded-pill">14</span>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">Read Messages</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Compose</a>
-                                            <a href="#" class="list-group-item list-group-item-action">Template</a>
-                                        </div>
-
-                                        <!-- News -->
-                                        <div class="list-group list-group-borderless">
-                                            <div class="list-group-item d-flex align-items-center border-bottom">
-                                                <div class="flex-shrink-0 me-2">
-                                                    <i class="demo-pli-calendar-4 fs-4"></i>
-                                                </div>
-                                                <h5 class="flex-grow-1 m-0">News</h5>
-                                            </div>
-                                            <small class="list-group-item">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dolore unde autem, molestiae eum laborum aliquid at commodi cum? Blanditiis.
-                                            </small>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-3">
-
-                                        <!-- List Group -->
-                                        <div class="list-group list-group-borderless">
-                                            <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <i class="demo-pli-data-settings fs-2"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ">
-                                                    <div class="d-flex justify-content-between align-items-start">
-                                                        <a href="#" class="h6 d-block mb-1 stretched-link text-decoration-none">Data Backup</a>
-                                                        <span class="badge bg-success rounded-pill ms-auto">40%</span>
-                                                    </div>
-                                                    <small class="text-muted">Current usage of disks for backups.</small>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <i class="demo-pli-support fs-2"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ">
-                                                    <a href="#" class="h6 d-block mb-1 stretched-link text-decoration-none">Support</a>
-                                                    <small class="text-muted">Have any questions ? please don't hesitate to ask.</small>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <i class="demo-pli-computer-secure fs-2"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ">
-                                                    <a href="#" class="h6 d-block mb-1 stretched-link text-decoration-none">Security</a>
-                                                    <small class="text-muted">Our devices are secure and up-to-date.</small>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item list-group-item-action d-flex align-items-start">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <i class="demo-pli-map-2 fs-2"></i>
-                                                </div>
-                                                <div class="flex-grow-1 ">
-                                                    <a href="#" class="h6 d-block mb-1 stretched-link text-decoration-none">Location</a>
-                                                    <small class="text-muted">From our location up here, we kept in close touch.</small>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-3">
-
-                                        <!-- Simple gallery -->
-                                        <div class="d-grid gap-2 ps-5 pe-2">
-                                            <div class="row g-1 rounded-3 overflow-hidden">
-                                                <div class="col-6 mt-0">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-1.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                                <div class="col-6 mt-0">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-3.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                                <div class="col-6">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-2.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                                <div class="col-6">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-4.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                                <div class="col-6">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-6.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                                <div class="col-6">
-                                                    <img class="img-fluid" src="./assets/img/megamenu/img-5.jpg" alt="thumbnails" loading="lazy">
-                                                </div>
-                                            </div>
-                                            <a href="#" class="btn btn-primary">Browse Gallery</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End - Mega Dropdown -->
-
-                        <!-- Notification Dropdown -->
-                        <div class="dropdown">
-
-                            <!-- Toggler -->
-                            <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" aria-label="Notification dropdown" aria-expanded="false">
-                                <span class="d-block position-relative">
-                                    <i class="demo-psi-bell"></i>
-                                    <span class="badge badge-super rounded bg-danger p-1">
-
-                                        <span class="visually-hidden">unread messages</span>
-                                    </span>
-                                </span>
-                            </button>
-
-                            <!-- Notification dropdown menu -->
-                            <div class="dropdown-menu dropdown-menu-end w-md-300px">
-                                <div class="border-bottom px-3 py-2 mb-3">
-                                    <h5>Notifications</h5>
-                                </div>
-
-                                <div class="list-group list-group-borderless">
-
-                                    <!-- List item -->
-                                    <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                        <div class="flex-shrink-0 me-3">
-                                            <i class="demo-psi-data-settings text-muted fs-2"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ">
-                                            <a href="#" class="h6 d-block mb-0 stretched-link text-decoration-none">Your storage is full</a>
-                                            <small class="text-muted">Local storage is nearly full.</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- List item -->
-                                    <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                        <div class="flex-shrink-0 me-3">
-                                            <i class="demo-psi-file-edit text-blue-200 fs-2"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ">
-                                            <a href="#" class="h6 d-block mb-0 stretched-link text-decoration-none">Writing a New Article</a>
-                                            <small class="text-muted">Wrote a news article for the John Mike</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- List item -->
-                                    <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                        <div class="flex-shrink-0 me-3">
-                                            <i class="demo-psi-speech-bubble-7 text-green-300 fs-2"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ">
-                                            <div class="d-flex justify-content-between align-items-start">
-                                                <a href="#" class="h6 mb-0 stretched-link text-decoration-none">Comment sorting</a>
-                                                <span class="badge bg-info rounded ms-auto">NEW</span>
-                                            </div>
-                                            <small class="text-muted">You have 1,256 unsorted comments.</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- List item -->
-                                    <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                        <div class="flex-shrink-0 me-3">
-                                            <img class="img-xs rounded-circle" src="./assets/img/profile-photos/7.png" alt="Profile Picture" loading="lazy">
-                                        </div>
-                                        <div class="flex-grow-1 ">
-                                            <a href="#" class="h6 d-block mb-0 stretched-link text-decoration-none">Lucy Sent you a message</a>
-                                            <small class="text-muted">30 minutes ago</small>
-                                        </div>
-                                    </div>
-
-                                    <!-- List item -->
-                                    <div class="list-group-item list-group-item-action d-flex align-items-start mb-3">
-                                        <div class="flex-shrink-0 me-3">
-                                            <img class="img-xs rounded-circle" src="./assets/img/profile-photos/3.png" alt="Profile Picture" loading="lazy">
-                                        </div>
-                                        <div class="flex-grow-1 ">
-                                            <a href="#" class="h6 d-block mb-0 stretched-link text-decoration-none">Jackson Sent you a message</a>
-                                            <small class="text-muted">1 hours ago</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center mb-2">
-                                        <a href="#" class="btn-link">Show all Notifications</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End - Notification dropdown -->
-
                         <!-- User dropdown -->
                         <div class="dropdown">
 
                             <!-- Toggler -->
                             <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" aria-label="User dropdown" aria-expanded="false">
-                                <i class="demo-psi-male"></i>
+                                <i class="fa-solid fa-user"></i>
                             </button>
 
                             <!-- User dropdown menu -->
@@ -601,72 +369,45 @@
                                 <!-- User dropdown header -->
                                 <div class="d-flex align-items-center border-bottom px-3 py-2">
                                     <div class="flex-shrink-0">
-                                        <img class="img-sm rounded-circle" src="./assets/img/profile-photos/1.png" alt="Profile Picture" loading="lazy">
+                                        <img class="img-sm rounded-circle" src="./images/AxelDC.jpeg" alt="Profile Picture" loading="lazy">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h5 class="mb-0">Aaron Chavez</h5>
-                                        <span class="text-muted fst-italic"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a4b4b5845447549424b5c4f506a4f524b475a464f04494547">[email&#160;protected]</a></span>
+                                        <h5 class="mb-0">Axel De Clerck</h5>
+                                        <span class="text-muted fst-italic"><a href="#" class="__cf_email__" data-cfemail="2a4b4b5845447549424b5c4f506a4f524b475a464f04494547">Insert email</a></span>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-7">
-
-                                        <!-- Simple widget and reports -->
-                                        <div class="list-group list-group-borderless mb-3">
-                                            <div class="list-group-item text-center border-bottom mb-3">
-                                                <p class="h1 display-1 text-green">17</p>
-                                                <p class="h6 mb-0"><i class="demo-pli-basket-coins fs-3 me-2"></i> New orders</p>
-                                                <small class="text-muted">You have new orders</small>
-                                            </div>
-                                            <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
-                                                Today Earning
-                                                <small class="fw-bolder">$578</small>
-                                            </div>
-                                            <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
-                                                Tax
-                                                <small class="fw-bolder text-danger">- $28</small>
-                                            </div>
-                                            <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
-                                                Total Earning
-                                                <span class="fw-bold text-primary">$6,578</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-md-5">
-
+                                    <div class="col-12">
                                         <!-- User menu link -->
                                         <div class="list-group list-group-borderless h-100 py-3">
                                             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                                <span><i class="demo-pli-mail fs-5 me-2"></i> Messages</span>
+                                                <span><i class="fa-solid fa-user"></i> Messages</span>
                                                 <span class="badge bg-danger rounded-pill">14</span>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
-                                                <i class="demo-pli-male fs-5 me-2"></i> Profile
+                                                <i class="fa-solid fa-user"></i> Profile
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
-                                                <i class="demo-pli-gear fs-5 me-2"></i> Settings
+                                                <i class="fa-solid fa-user"></i> Settings
                                             </a>
 
                                             <a href="#" class="list-group-item list-group-item-action mt-auto">
-                                                <i class="demo-pli-computer-secure fs-5 me-2"></i> Lock screen
+                                                <i class="fa-solid fa-user"></i> Lock screen
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
-                                                <i class="demo-pli-unlock fs-5 me-2"></i> Logout
+                                                <i class="fa-solid fa-user"></i> Logout
                                             </a>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- End - User dropdown -->
 
                         <!-- Sidebar Toggler -->
                         <button class="sidebar-toggler header__btn btn btn-icon btn-sm" type="button" aria-label="Sidebar button">
-                            <i class="demo-psi-dot-vertical"></i>
+                            <i class="fa-solid fa-user"></i>
                         </button>
 
                     </div>
@@ -708,19 +449,19 @@
                                 <!-- Collapsed user menu -->
                                 <div id="usernav" class="nav flex-column collapse">
                                     <a href="#" class="nav-link d-flex justify-content-between align-items-center">
-                                        <span><i class="demo-pli-mail fs-5 me-2"></i><span class="ms-1">Messages</span></span>
+                                        <span><i class="fa-solid fa-user"></i><span class="ms-1">Messages</span></span>
                                         <span class="badge bg-danger rounded-pill">14</span>
                                     </a>
                                     <a href="#" class="nav-link">
-                                        <i class="demo-pli-male fs-5 me-2"></i>
+                                        <i class="fa-solid fa-user"></i>
                                         <span class="ms-1">Profile</span>
                                     </a>
                                     <a href="#" class="nav-link">
-                                        <i class="demo-pli-gear fs-5 me-2"></i>
+                                        <i class="fa-solid fa-user"></i>
                                         <span class="ms-1">Settings</span>
                                     </a>
                                     <a href="#" class="nav-link">
-                                        <i class="demo-pli-unlock fs-5 me-2"></i>
+                                        <i class="fa-solid fa-user"></i>
                                         <span class="ms-1">Logout</span>
                                     </a>
                                 </div>
@@ -739,7 +480,7 @@
                             <!-- Regular menu link -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link mininav-toggle">
-                                    <span data-feather="home"></span>
+                                    <i class="fa-solid fa-house"></i>
                                     <span class="nav-label mininav-content ms-1">Dashboard</span>
                                 </a>
                             </li>
@@ -757,20 +498,20 @@
                             <!-- Link with submenu -->
                             <li class="nav-item has-sub">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="demo-pli-boot-2 fs-5 me-2"></i>
+                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="fa-solid fa-house"></i>
                                     <span class="nav-label ms-1">Activity overview</span>
                                 </a>
 
                                 <!-- Ui Elements submenu list -->
                                 <ul class="mininav-content nav collapse">
                                     <li class="nav-item">
-                                        <a href="./ui-elements/buttons/" class="nav-link">Year-to-date</a>
+                                        <a href="#" class="nav-link">Year-to-date</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="./ui-elements/cards/" class="nav-link">Rolling</a>
+                                        <a href="#" class="nav-link">Rolling</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="./ui-elements/cards/" class="nav-link">All activities</a>
+                                        <a href="#" class="nav-link">All activities</a>
                                     </li>
                                 </ul>
                                 <!-- END : Ui Elements submenu list -->
@@ -781,17 +522,17 @@
                             <!-- Link with submenu -->
                             <li class="nav-item has-sub">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="demo-pli-pen-5 fs-5 me-2"></i>
+                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="fa-solid fa-house"></i>
                                     <span class="nav-label ms-1">Performance insights</span>
                                 </a>
 
                                 <!-- Forms submenu list -->
                                 <ul class="mininav-content nav collapse">
                                     <li class="nav-item">
-                                        <a href="./forms/general/" class="nav-link">Performance</a>
+                                        <a href="#" class="nav-link">Performance</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="./forms/tags/" class="nav-link">Fitness progress</a>
+                                        <a href="#" class="nav-link">Fitness progress</a>
                                     </li>
 
                                 </ul>
