@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Axel De Clerck">
+        <script src="https://unpkg.com/feather-icons"></script>
+        <title>Axel fitness app</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="root" class="root">
+          <!-- START of horizontal navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top flex-md-nowrap p-0 shadow align-items-center">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../images/KeyFit-Blue&White.svg" width="30" height="30" alt="">
+            <h4 class="px-1 d-none d-md-inline">KeyFit</h4>
+          </a><!-- END of navbar-brand-->
+          <button class="navbar-toggler px-3" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsableNav" aria-controls="CollapsableNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="CollapsableNav">
+            <ul class="navbar-nav mr-auto" id="CollapsedList">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><h5>Home</h5></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled d-md-none" href="#"><h5>Profile</h5></a>
+              </li>
+            </ul>
+          </div><!-- END of items in collapsing toggle-->
+    
+          <ul class="navbar-nav d-none d-md-block" id="UncollapsedNav">
+            <li class="nav-item text-nowrap">
+              <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <img class="img-fluid" src="../images/AxelDC.jpeg" >
+                Axel
+              </a>
+              <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up show" aria-labelledby="navbarDropdownUserImage" data-bs-popper="none">
+                <h6 class="dropdown-header d-flex align-items-center">
+                    <img class="dropdown-user-img img-fluid" src="../images/AxelDC.jpeg">
+                    <div class="dropdown-user-details">
+                        <div class="dropdown-user-details-name">Axel De Clerck</div>
+                        <div class="dropdown-user-details-email">Axel.dc@coucou.com</div>
+                    </div>
+                </h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#!">
+                  <span data-feather="settings"></span>
+                  Account
+                </a>
+                <a class="dropdown-item" href="#!">
+                  <span data-feather="log-out"></span>
+                    Logout
+                </a>
+            </div>
+            </li>
+          </ul><!-- END of items not in collapsing toggle-->
+        </nav>
+        
+        <!-- END of horizontal navbar-->
+
+        <!-- START of sidebar + main content-->
+        <div class="container-fluid">
+          <div class="row pt-4">
+            <nav class="col-md-2 col-lg-2 d-none d-md-block bg-light sidebar">
+              <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active mt-3" href="#">
+                      <span data-feather="home"></span>
+                      Dashboard <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Insights</span>
+                    <!-- <a class="d-flex align-items-center text-muted" href="#">
+                      <span data-feather="plus-circle"></span>
+                    </a> -->
+                  </h6>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="activity"></span>
+                      Volume
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="trending-up"></span>
+                      Power
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="trending-up"></span>
+                      Fitness
+                    </a>
+                  </li>
+                </ul>
+    
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                  <span>Other</span>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="file-text"></span>
+                      List of activities
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span data-feather="file-text"></span>
+                      Strava dashboard
+                    </a>
+                  </li>
+                </ul>
+                <p id="KeyFitCopyright">&copy; KeyFit 2022</p>
+              </div>
+            </nav><!-- END of sidebar-->
+            
+            <!-- START of main content-->
+            <main role="main" class="main_content col-12 col-md-10 col-lg-10 ml-sm-auto pt-2 px-4 mt-5">
+              <div class="main_content_header content_boxed">
+                <div class="main_content_section content_boxed"> 
+                  <h1>Monday, 15 May 2022</h1>  
+                  <h2>Hello Axel,</h2>
+                  <h3>Welcome back to KeyFit!</h3>
+                </div>
+              </div>
+            </main><!-- END of main content-->
+        </div>
+        
+
+
+    <!-- jQuery (Bootstrap JS plugins depend on it)-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+        <!-- Not sure the following is necessary -->
+    <!-- <script src="js/script.js"></script> -->
+    
+    <script>
+      feather.replace()
+    </script>
+
+    
+
+    </body>
+</html>
