@@ -331,7 +331,7 @@
                         </a>
 
                         <!-- Brand title -->
-                        <div class="brand-title">KeyFit</div>
+                        <div class="brand-title d-none d-md-block">KeyFit</div>
 
                     </div>
                 </div>
@@ -344,7 +344,7 @@
 
                         <!-- Navigation Toggler -->
                         <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm" aria-label="Nav Toggler">
-                            <i class="demo-psi-view-list"></i>
+                            <i data-feather="menu"></i>
                         </button>
 
                         <!-- Space for Searchbox if needed -->
@@ -360,16 +360,18 @@
 
                             <!-- Toggler -->
                             <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" aria-label="User dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i>
+                                <img class="img-fluid" id="user_dropdown_image" src="../images/AxelDC.jpeg">
+                                <p class="d-none d-md-inline">Axel</p>
+                                <i data-feather="chevron-down" class="d-none d-sm-inline"></i>
                             </button>
 
                             <!-- User dropdown menu -->
-                            <div class="dropdown-menu dropdown-menu-end w-md-450px">
+                            <div class="dropdown-menu dropdown-menu-end w-md-650px">
 
                                 <!-- User dropdown header -->
                                 <div class="d-flex align-items-center border-bottom px-3 py-2">
                                     <div class="flex-shrink-0">
-                                        <img class="img-sm rounded-circle" src="./images/AxelDC.jpeg" alt="Profile Picture" loading="lazy">
+                                        <img class="img-sm rounded-circle" height="50px" width="50px" src="./images/AxelDC.jpeg" alt="Profile Picture" loading="lazy">
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h5 class="mb-0">Axel De Clerck</h5>
@@ -405,14 +407,12 @@
                         </div>
                         <!-- End - User dropdown -->
 
-                        <!-- Sidebar Toggler -->
-                        <button class="sidebar-toggler header__btn btn btn-icon btn-sm" type="button" aria-label="Sidebar button">
-                            <i class="fa-solid fa-user"></i>
-                        </button>
-
                     </div>
+                    <!-- End - Content Header - Right Side -->
                 </div>
+                <!-- End - Content Header (Left + right) -->
             </div>
+            <!-- End - Content inner (Brand + content) -->
         </header>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!-- END - HEADER -->
@@ -480,7 +480,7 @@
                             <!-- Regular menu link -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link mininav-toggle">
-                                    <i class="fa-solid fa-house"></i>
+                                    <i data-feather="home"></i>
                                     <span class="nav-label mininav-content ms-1">Dashboard</span>
                                 </a>
                             </li>
@@ -496,10 +496,10 @@
                         <ul class="mainnav__menu nav flex-column">
 
                             <!-- Link with submenu -->
-                            <li class="nav-item has-sub">
+                            <li class="nav-item">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="fa-solid fa-house"></i>
-                                    <span class="nav-label ms-1">Activity overview</span>
+                                <a href="#" class="mininav-toggle nav-link collapsed"><i data-feather="activity"></i>
+                                    <span class="nav-label ms-1">Activity statistics</span>
                                 </a>
 
                                 <!-- Ui Elements submenu list -->
@@ -520,9 +520,10 @@
                             <!-- END : Link with submenu -->
 
                             <!-- Link with submenu -->
-                            <li class="nav-item has-sub">
+                            <li class="nav-item">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed"><i class="fa-solid fa-house"></i>
+                                <a href="#" class="mininav-toggle nav-link collapsed">
+                                    <i data-feather="bar-chart"></i>
                                     <span class="nav-label ms-1">Performance insights</span>
                                 </a>
 
@@ -580,6 +581,9 @@
     <!-- jQuery JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
 
+    <!-- Popper JS -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -587,7 +591,7 @@
     <script src="js/KeyFit.js"></script>
 
     <!-- Space for other scripts -->
-
+    <script>feather.replace()</script>
 
 </body>
 
