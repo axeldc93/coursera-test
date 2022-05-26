@@ -30,7 +30,7 @@
 
     <!-- PAGE CONTAINER -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div id="root" class="root mn--max hd--expanded">
+    <div id="root" class="root">
 
         <!-- CONTENTS -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -39,10 +39,10 @@
                 <div class="content__wrap">
 
                     <!-- Page title and information -->
-                    <p>Thursday, May 25, 2022</p>
+                    <p class="Date">Thursday, May 25, 2022</p>
                     <h1 class="page-title mb-2">Hello, Axel</h1>
-                    <h2 class="h5">Welcome back to the Dashboard.</h2>
-                    <p>Go to the settings to personalize this dashboard.<br>Enjoy.</p>
+                    <h5 class="page-subtitle">Welcome back to the Dashboard.</h5>
+                    <p>Go to the settings to personalize this dashboard.<br>Enjoy.<br></p>
                     <!-- END : Page title and information -->
 
                 </div>
@@ -60,12 +60,12 @@
                                         <h3 class="h4 m-0">Day overview</h3>
                                     </div>
                                     <div class="toolbar-end">
-                                        <button type="button" class="btn btn-icon btn-sm btn-hover btn-light" aria-label="Refresh Network Chart">
-                                            <i data-feather="home"></i>
+                                        <button type="button" class="btn btn-icon btn-sm btn-hover btn-light" aria-label="Refresh Data">
+                                            <i data-feather="refresh-ccw"></i>
                                         </button>
                                         <div class="dropdown">
                                             <button class="btn btn-icon btn-sm btn-hover btn-light" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Network dropdown">
-                                                <i class="fa-solid fa-house"></i>
+                                                <i data-feather="settings"></i>
                                                 <span class="visually-hidden">Toggle Dropdown</span>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
@@ -145,9 +145,9 @@
                                 <div class="col-sm-6">
 
                                     <!-- Tile - Swim data -->
-                                    <div class="card bg-success text-white overflow-hidden mb-3">
+                                    <div class="card KF-bg-Accent1 overflow-hidden mb-3">
                                         <div class="p-3 pb-2">
-                                            <h5 class="mb-3"><i class="demo-psi-data-storage text-reset text-opacity-75 fs-3 me-2"></i> Swim</h5>
+                                            <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-3 me-2"></i> Swim</h5>
                                             <ul class="list-group list-group-borderless">
                                                 <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
                                                     <div class="me-auto">Today</div>
@@ -173,9 +173,9 @@
                                 <div class="col-sm-6">
 
                                     <!-- Tile - Run data -->
-                                    <div class="card bg-info text-white overflow-hidden mb-3">
+                                    <div class="card KF-bg-Accent2 overflow-hidden mb-3">
                                         <div class="p-3 pb-2">
-                                            <h5 class="mb-3"><i class="demo-psi-coin text-reset text-opacity-75 fs-2 me-2"></i> Bike</h5>
+                                            <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Bike</h5>
                                             <ul class="list-group list-group-borderless">
                                                 <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
                                                     <div class="me-auto">Today</div>
@@ -203,16 +203,16 @@
                                 <div class="col-sm-6">
 
                                     <!-- Tile - Bike data -->
-                                    <div class="card bg-purple text-white overflow-hidden mb-3">
+                                    <div class="card KF-bg-Accent3 overflow-hidden mb-3">
                                         <div class="p-3 pb-2">
-                                            <h5 class="mb-3"><i class="demo-psi-basket-coins text-reset text-opacity-75 fs-2 me-2"></i> Sales</h5>
+                                            <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Run</h5>
                                             <ul class="list-group list-group-borderless">
                                                 <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
                                                     <div class="me-auto">Today</div>
                                                     <span class="fw-bold">$764</span>
                                                 </li>
                                                 <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
-                                                    <div class="me-auto">Last 7 Day</div>
+                                                    <div class="me-auto">Last 7 Day average</div>
                                                     <span class="fw-bold">$1,332</span>
                                                 </li>
                                             </ul>
@@ -231,9 +231,9 @@
                                 <div class="col-sm-6">
 
                                     <!-- Tile - Other data -->
-                                    <div class="card bg-warning text-white overflow-hidden mb-3">
+                                    <div class="card KF-bg-Accent4 overflow-hidden mb-3">
                                         <div class="p-3 pb-2">
-                                            <h5 class="mb-3"><i class="demo-psi-basket-coins text-reset text-opacity-75 fs-2 me-2"></i> Other</h5>
+                                            <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Other</h5>
                                             <ul class="list-group list-group-borderless">
                                                 <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
                                                     <div class="me-auto">Today</div>
@@ -327,7 +327,7 @@
 
                         <!-- Brand logo -->
                         <a href="./" class="brand-img stretched-link">
-                            <img src="./images/KeyFit-White.svg" alt="KeyFit Logo" class="KeyFit logo" width="40" height="40">
+                            <img src="./images/KeyFit-White.svg" alt="KeyFit Logo">
                         </a>
 
                         <!-- Brand title -->
@@ -343,7 +343,7 @@
                     <div class="header__content-start">
 
                         <!-- Navigation Toggler -->
-                        <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm" aria-label="Nav Toggler">
+                        <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm d-lg-none" aria-label="Nav Toggler">
                             <i data-feather="menu"></i>
                         </button>
 
@@ -366,7 +366,7 @@
                             </button>
 
                             <!-- User dropdown menu -->
-                            <div class="dropdown-menu dropdown-menu-end w-md-650px">
+                            <div class="dropdown-menu dropdown-menu-end">
 
                                 <!-- User dropdown header -->
                                 <div class="d-flex align-items-center border-bottom px-3 py-2">
@@ -419,7 +419,7 @@
 
         <!-- MAIN NAVIGATION -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <nav id="mainnav-container" class="mainnav">
+        <nav id="mainnav-container" class="mainnav d-none d-lg-block">
             <div class="mainnav__inner">
 
                 <!-- Navigation menu -->
@@ -428,14 +428,14 @@
                     <!-- Profile Widget -->
                     <div class="mainnav__profile mt-3 d-flex3">
 
-                        <div class="mt-2 d-mn-max"></div>
+                        <div class="mt-2"></div>
 
                         <!-- Profile picture  -->
                         <div class="mininav-toggle text-center py-2">
                             <img class="mainnav__avatar img-md rounded-circle border img-fluid"  src="./images/AxelDC.jpeg" alt="Profile Picture">
                         </div>
 
-                        <div class="mininav-content collapse d-mn-max">
+                        <div class="mininav-content collapse">
                             <div class="d-grid">
 
                                 <!-- User name and position -->
@@ -473,7 +473,7 @@
                     <!-- End - Profile widget -->
 
                     <!-- Navigation Category -->
-                    <div class="mainnav__categoriy py-3">
+                    <div class="mainnav__category py-3">
                         <h6 class="mainnav__caption mt-0 px-3 fw-bold">Navigation</h6>
                         <ul class="mainnav__menu nav flex-column">
 
@@ -490,8 +490,8 @@
                     </div>
                     <!-- END : Navigation Category -->
 
-                    <!-- Components Category -->
-                    <div class="mainnav__categoriy py-3">
+                    <!-- Features Category -->
+                    <div class="mainnav__category py-3">
                         <h6 class="mainnav__caption mt-0 px-3 fw-bold">Features</h6>
                         <ul class="mainnav__menu nav flex-column">
 
@@ -547,7 +547,7 @@
                     <!-- END : Components Category -->
 
                 </div>
-                <!-- End - Navigation menu -->
+                <!-- End - Features menu -->
 
                 <!-- Bottom navigation menu -->
                 <div class="mainnav__bottom-content border-top pb-2">
