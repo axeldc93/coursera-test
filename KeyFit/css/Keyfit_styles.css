@@ -197,6 +197,12 @@ body{
 /*
 * A.3. Main navigation styling 
 */
+.mainnav{
+    display:flex;
+    grid-area:2/1/3/2;
+    max-width:13.75rem;
+    width:13.75rem;
+}
 
 @media(min-width:992px){ /* Side navigator appears at large screen size */
     .mainnav{position:relative}
@@ -207,12 +213,7 @@ body{
     .header__brand{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}}
 @media(min-width:1200px){.header__brand{padding-inline-start:1.25rem}}
 
-.mainnav{
-    display:flex;
-    grid-area:2/1/3/2;
-    max-width:13.75rem;
-    width:13.75rem;
-}
+
 .mainnav .scrollable-content{scrollbar-width:none}
 .mainnav__inner{background-color:#fff;color:#75868f;display:flex;flex-direction:column;height:100%;width:100%}
 .mainnav__inner :where(h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6):not(.mainnav__caption){color:#373c43}
@@ -222,17 +223,17 @@ body{
 .mainnav__top-content{display:flex;flex-direction:column;height:100%;overflow:auto;width:100%}
 .mainnav__top-content.os-host-overflow{overflow:visible}
 .mainnav__bottom-content{background-color:#fff;bottom:0;margin-top:auto;position:sticky}
-.mainnav__bottom-content,.mainnav__top-content{padding-inline:.75rem}@media(min-width:768px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
+.mainnav__bottom-content,.mainnav__top-content{padding-inline:.75rem}
+@media(min-width:768px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
 @media(min-width:992px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
 @media(min-width:1200px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
 .mainnav{transform:translateX(0);z-index:9999}
-.mainnav{transition:transform .5s ease}
 .mainnav__inner{height:100vh;position:sticky;top:0}
     
 @media(max-width:991.98px){
     .mainnav{transform:translateX(-13.8125rem);z-index:1002}}
 
-
+.mainnav__avatar {max-width: 60% !important}
 .mainnav__caption{color:#373c43} /* Styling of category titles in menu */
 .mainnav__inner .mainnav__menu .nav-link{padding-block:.59rem}
 .mainnav__inner .mainnav__menu>.nav-item>.nav-link{display:flex}
