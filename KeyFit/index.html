@@ -39,7 +39,7 @@
                 <div class="content__wrap">
 
                     <!-- Page title and information -->
-                    <p class="Date">Thursday, May 25, 2022</p>
+                    <p class="Navigator">Thursday, May 25, 2022</p>
                     <h1 class="page-title mb-2">Hello, Axel</h1>
                     <h5 class="page-subtitle">Welcome back to the Dashboard.</h5>
                     <p>Go to the settings to personalize this dashboard.<br>Enjoy.<br></p>
@@ -97,17 +97,17 @@
                                     </div>
                                 </div>
 
-                                <!-- Network - Area Chart -->
+                                <!-- 7 days rolling activity -->
                                 <div class="card-body py-0" style="height: 250px; max-height: 275px">
                                     <canvas id="_dm-networkChart"></canvas>
                                 </div>
-                                <!-- END : Network - Area Chart -->
+                                <!-- END : 7 days rolling activity -->
 
                                 <div class="card-body mt-4">
                                     <div class="row">
                                         <div class="col-12">
 
-                                            <!-- CPU Temperature -->
+                                            <!-- HR data -->
                                             <h4 class="h5 mb-3">Heart rate</h4>
                                             <div class="row">
                                                 <div class="col-5">
@@ -126,7 +126,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- END : CPU Temperature -->
+                                            <!-- END : HR Data -->
 
                                             <!-- Today Tips -->
                                             <div class="mt-4">
@@ -479,9 +479,21 @@
 
                             <!-- Regular menu link -->
                             <li class="nav-item">
-                                <a href="#" class="nav-link mininav-toggle">
+                                <a href="./index.html" class="nav-link mininav-toggle">
                                     <i data-feather="home"></i>
                                     <span class="nav-label mininav-content ms-1">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link mininav-toggle">
+                                    <i data-feather="idea"></i>
+                                    <span class="nav-label mininav-content ms-1">KeyFit Insights</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link mininav-toggle">
+                                    <i data-feather="about"></i>
+                                    <span class="nav-label mininav-content ms-1">About KeyFit</span>
                                 </a>
                             </li>
                             <!-- END : Regular menu link -->
@@ -498,23 +510,9 @@
                             <!-- Link with submenu -->
                             <li class="nav-item">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed"><i data-feather="activity"></i>
+                                <a href="./Statistics.html" class="mininav-toggle nav-link"><i data-feather="activity"></i>
                                     <span class="nav-label ms-1">Activity statistics</span>
                                 </a>
-
-                                <!-- Ui Elements submenu list -->
-                                <ul class="mininav-content nav collapse">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Year-to-date</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Rolling</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">All activities</a>
-                                    </li>
-                                </ul>
-                                <!-- END : Ui Elements submenu list -->
 
                             </li>
                             <!-- END : Link with submenu -->
@@ -522,22 +520,10 @@
                             <!-- Link with submenu -->
                             <li class="nav-item">
 
-                                <a href="#" class="mininav-toggle nav-link collapsed">
+                                <a href="./insights.html" class="mininav-toggle nav-link">
                                     <i data-feather="bar-chart"></i>
                                     <span class="nav-label ms-1">Performance insights</span>
                                 </a>
-
-                                <!-- Forms submenu list -->
-                                <ul class="mininav-content nav collapse">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Performance</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Fitness progress</a>
-                                    </li>
-
-                                </ul>
-                                <!-- END : Forms submenu list -->
 
                             </li>
                             <!-- END : Link with submenu -->

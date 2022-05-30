@@ -22,6 +22,13 @@ body{
   .KF-bg-Accent3{background-Color:#42bff1; color:white}
   .KF-bg-Accent4{background-Color:#f4910e; color:white}
 
+  .KF-bt-main{border-top: 3px solid #25476a; background-color: white; color:black}
+  .KF-bt-Second{border-top: 3px solid #eef2f6; background-color: white; color:black}
+  .KF-bt-Accent1{border-top: 3px solid #d4335c; background-color: white; color:black}
+  .KF-bt-Accent2{border-top: 3px solid #35cabc; background-color: white; color:black}
+  .KF-bt-Accent3{border-top: 3px solid #42bff1; background-color: white; color:black}
+  .KF-bt-Accent4{border-top: 3px solid #f4910e; background-color: white; color:black}
+
 
 
 
@@ -161,6 +168,21 @@ body{
     text-transform:capitalize
 }
 
+.content .box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    margin-bottom: 1rem;
+    padding: 15px;
+}
+.content .box h2 {
+    font-size: 1.5vw;
+    color: var(--grayishBlue);
+}
+.content .box p {
+    font-size: 1vw;
+    color: var(--grayishBlue);
+}
+
 /* Styling of content__header */
 .content__header{
     background-color:#25476a;
@@ -173,7 +195,7 @@ body{
 
 .content__header .page-title{color:#fff}
 .content__header .page-subtitle{color:#fff}
-.content__header .Date{text-transform: uppercase; font-size: 400}
+.content__header .Navigator{text-transform: uppercase; font-size: 400}
 
 
 .content__header.overlapping .content__wrap:after{content:"";display:block;height:12.5vw;width:100%}
