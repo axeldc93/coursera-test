@@ -1,0 +1,291 @@
+<!-- CONTENTS -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section id="content" class="content">
+    <div class="content__header content__boxed overlapping">
+        <div class="content__wrap">
+
+            <!-- Page title and information -->
+            <p class="Navigator" id="current_date">
+                <script>
+                    date = new Date();
+                    year = date.getFullYear();
+                    month = date.toLocaleString('en-us', {month:'long'});
+                    day = date.getDate();
+                    document.getElementById("current_date").innerHTML = month + " " + day + ", " + year;
+                </script>
+            </p>
+            <h1 class="page-title mb-2">Hello, Axel</h1>
+            <h5 class="page-subtitle">Welcome back to the Dashboard.</h5>
+            <p>Go to the settings to personalize this dashboard.<br>Enjoy.<br></p>
+            <!-- END : Page title and information -->
+
+        </div>
+
+    </div>
+
+    <div class="content__boxed">
+        <div class="content__wrap">
+            <div class="row">
+                <div class="col-xl-7 mb-3 mb-xl-0">
+
+                    <div class="card h-100">
+                        <div class="card-header d-flex align-items-center border-0">
+                            <div class="me-auto">
+                                <h3 class="h4 m-0">Day overview</h3>
+                            </div>
+                            <div class="toolbar-end">
+                                <button type="button" class="btn btn-icon btn-sm btn-hover btn-light" aria-label="Refresh Data">
+                                    <i data-feather="refresh-ccw"></i>
+                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-icon btn-sm btn-hover btn-light" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Network dropdown">
+                                        <i data-feather="settings"></i>
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fa-solid fa-house"></i> Edit Date
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fa-solid fa-house"></i> Refresh
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fa-solid fa-house"></i> Save as CSV
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fa-solid fa-house"></i> View Details
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7 days rolling activity -->
+                        <div class="card-body py-0" style="height: 250px; max-height: 275px">
+                            <canvas id="_dm-networkChart"></canvas>
+                        </div>
+                        <!-- END : 7 days rolling activity -->
+
+                        <div class="card-body mt-4">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <!-- HR data -->
+                                    <h4 class="h5 mb-3">Heart rate</h4>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="h5 display-6 fw-normal">
+                                                135 <span class="fw-bold fs-5 align-top">bpm</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 text-sm">
+                                            <div class="d-flex justify-content-between align-items-start px-3 mb-3">
+                                                Min Values
+                                                <span class="d-block badge bg-success ms-auto">42 bpm</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-start px-3">
+                                                Max Values
+                                                <span class="d-block badge bg-danger ms-auto">189 bpm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END : HR Data -->
+
+                                    <!-- Today Tips -->
+                                    <div class="mt-4">
+                                        <h5>Today Tips</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                    </div>
+                                    <!-- END : Today Tips -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <!-- Tile - Swim data -->
+                            <div class="card KF-bg-Accent1 overflow-hidden mb-3">
+                                <div class="p-3 pb-2">
+                                    <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-3 me-2"></i> Swim</h5>
+                                    <ul class="list-group list-group-borderless">
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Today</div>
+                                            <span class="fw-bold">xxx</span>
+                                        </li>
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Last 7 days average</div>
+                                            <span class="fw-bold">xxx</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Area Chart -->
+                                <div class="py-0" style="height: 70px; margin: 0 -5px -5px;">
+                                    <canvas id="_dm-hddChart"></canvas>
+                                </div>
+                                <!-- END : Area Chart -->
+
+                            </div>
+                            <!-- END : Tile - Swim data -->
+
+                        </div>
+                        <div class="col-sm-6">
+
+                            <!-- Tile - Run data -->
+                            <div class="card KF-bg-Accent2 overflow-hidden mb-3">
+                                <div class="p-3 pb-2">
+                                    <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Bike</h5>
+                                    <ul class="list-group list-group-borderless">
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Today</div>
+                                            <span class="fw-bold">xxx</span>
+                                        </li>
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Last 7 Day average</div>
+                                            <span class="fw-bold">xxx</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Line Chart -->
+                                <div class="py-0" style="height: 70px; margin: 0 -5px -5px;">
+                                    <canvas id="_dm-earningChart"></canvas>
+                                </div>
+                                <!-- END : Line Chart -->
+
+                            </div>
+                            <!-- END : Tile - Run data -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <!-- Tile - Bike data -->
+                            <div class="card KF-bg-Accent3 overflow-hidden mb-3">
+                                <div class="p-3 pb-2">
+                                    <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Run</h5>
+                                    <ul class="list-group list-group-borderless">
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Today</div>
+                                            <span class="fw-bold">$764</span>
+                                        </li>
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Last 7 Day average</div>
+                                            <span class="fw-bold">$1,332</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Bar Chart -->
+                                <div class="py-0" style="height: 70px">
+                                    <canvas id="_dm-salesChart"></canvas>
+                                </div>
+                                <!-- END : Bar Chart -->
+
+                            </div>
+                            <!-- END : Tile - Bike data -->
+
+                        </div>
+                        <div class="col-sm-6">
+
+                            <!-- Tile - Other data -->
+                            <div class="card KF-bg-Accent4 overflow-hidden mb-3">
+                                <div class="p-3 pb-2">
+                                    <h5 class="mb-3"><i class="text-reset text-opacity-75 fs-2 me-2"></i> Other</h5>
+                                    <ul class="list-group list-group-borderless">
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Today</div>
+                                            <span class="fw-bold">34</span>
+                                        </li>
+                                        <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                            <div class="me-auto">Last 7 days average</div>
+                                            <span class="fw-bold">79</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Horizontal Bar Chart -->
+                                <div class="py-0 pb-2" style="height: 70px">
+                                    <canvas id="_dm-taskChart"></canvas>
+                                </div>
+                                <!-- END : Bar Chart -->
+
+                            </div>
+                            <!-- END : Tile - Other data -->
+
+                        </div>
+                    </div>
+
+                    <!-- Year to date widget -->
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 p-3">
+                                    <div class="h3 display-3">189</div>
+                                    <span class="h6">hours</span>
+                                </div>
+                                <div class="flex-grow-1 text-center ms-3">
+                                    <p class="text-muted">This year you did 189 hours of sports.</p>
+                                    <button class="btn btn-sm btn-danger">View Details</button>
+
+                                    <!-- Breakdown per sport -->
+                                    <div class="mt-4 pt-3 d-flex justify-content-around border-top">
+                                        <div class="text-center">
+                                            <h4 class="mb-1">20</h4>
+                                            <small class="text-muted">Swim</small>
+                                        </div>
+                                        <div class="text-center">
+                                            <h4 class="mb-1">10</h4>
+                                            <small class="text-muted">Bike</small>
+                                        </div>
+                                        <div class="text-center">
+                                            <h4 class="mb-1">5</h4>
+                                            <small class="text-muted">Run</small>
+                                        </div>
+                                    </div>
+                                    <!-- END : Breakdown per sport -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END : Year to date stat -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="content__boxed mt-auto">
+        <div class="content__wrap py-3 py-md-1 d-flex flex-column flex-md-row align-items-md-center">
+            <div class="text-nowrap mb-4 mb-md-0">Copyright &copy; 2022 <a href="#" class="ms-1 btn-link fw-bold">KeyFit</a></div>
+            <nav class="nav flex-column gap-1 flex-md-row gap-md-3 ms-md-auto" style="row-gap: 0 !important;">
+                <a class="nav-link px-0" href="#">Privacy Policy</a>
+                <a class="nav-link px-0" href="#">Terms and conditions</a>
+                <a class="nav-link px-0" href="#">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- END - FOOTER -->
+
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- END - CONTENTS -->

@@ -14,20 +14,20 @@ body{
     vertical-align: text-bottom;
     margin-right: 5px;
   }
-  /*Color palette*/
-  .KF-bg-main{background-color: #25476a; color:white}
-  .KF-bg-Second{background-Color: #eef2f6; color:white}
-  .KF-bg-Accent1{background-Color:#d4335c; color:white}
-  .KF-bg-Accent2{background-Color:#35cabc; color:white}
-  .KF-bg-Accent3{background-Color:#42bff1; color:white}
-  .KF-bg-Accent4{background-Color:#f4910e; color:white}
+/*Color palette*/
+.KF-bg-main{background-color: #25476a; color:white}
+.KF-bg-Second{background-Color: #eef2f6; color:white}
+.KF-bg-Accent1{background-Color:#d4335c; color:white}
+.KF-bg-Accent2{background-Color:#35cabc; color:white}
+.KF-bg-Accent3{background-Color:#42bff1; color:white}
+.KF-bg-Accent4{background-Color:#f4910e; color:white}
 
-  .KF-bt-main{border-top: 3px solid #25476a; background-color: white; color:black}
-  .KF-bt-Second{border-top: 3px solid #eef2f6; background-color: white; color:black}
-  .KF-bt-Accent1{border-top: 3px solid #d4335c; background-color: white; color:black}
-  .KF-bt-Accent2{border-top: 3px solid #35cabc; background-color: white; color:black}
-  .KF-bt-Accent3{border-top: 3px solid #42bff1; background-color: white; color:black}
-  .KF-bt-Accent4{border-top: 3px solid #f4910e; background-color: white; color:black}
+.KF-bt-main{border-top: 3px solid #25476a; background-color: white; color:black}
+.KF-bt-Second{border-top: 3px solid #eef2f6; background-color: white; color:black}
+.KF-bt-Accent1{border-top: 3px solid #d4335c; background-color: white; color:black}
+.KF-bt-Accent2{border-top: 3px solid #35cabc; background-color: white; color:black}
+.KF-bt-Accent3{border-top: 3px solid #42bff1; background-color: white; color:black}
+.KF-bt-Accent4{border-top: 3px solid #f4910e; background-color: white; color:black}
 
 
 
@@ -62,7 +62,7 @@ body{
 * A.1. Styling of header 
 */
 
-/* A.1.1. Generic header stylng */
+/* A.1.1. Generic header styling */
 .header{
     background-color:#25476a;
     color:#dee3e9;
@@ -146,6 +146,7 @@ body{
     .header__content .dropdown-menu{
         width:300px !important}
 }
+@media(min-width:1200px){.header__brand{padding-inline-start:1.25rem}}
 
 /*
 * A.2. Main content styling
@@ -223,17 +224,24 @@ body{
     display:flex;
     grid-area:2/1/3/2;
     max-width:13.75rem;
-    width:13.75rem;
+    width: 0;
+}
+@media(min-width:250px){ /* Side navigator only appears if toggle button clicked on small screen sizes*/
+    .mainnav .mn-show{position:relative;width:13.75rem}
+    .mainnav__inner .mn-show{position:absolute}
+    .header__inner .mn-show {padding-inline-start:0;}
+    .header__content .mn-show{padding-inline-start:1.25rem}
+    .header__brand .mn-show{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}
 }
 
-@media(min-width:992px){ /* Side navigator appears at large screen size */
-    .mainnav{position:relative}
+@media(min-width:992px){ /* Side navigator appears all the time at large screen size */
+    .mainnav {position:relative;width:13.75rem}
     .mainnav__inner{position:absolute}
-    .mainnav{transition:max-width .5s ease;will-change:max-width}
-    .header__inner{padding-inline-start:0;}
+    .header__inner {padding-inline-start:0;}
     .header__content{padding-inline-start:1.25rem}
-    .header__brand{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}}
-@media(min-width:1200px){.header__brand{padding-inline-start:1.25rem}}
+    .header__brand{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}
+}
+
 
 
 .mainnav .scrollable-content{scrollbar-width:none}
@@ -251,9 +259,6 @@ body{
 @media(min-width:1200px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
 .mainnav{transform:translateX(0);z-index:9999}
 .mainnav__inner{height:100vh;position:sticky;top:0}
-    
-@media(max-width:991.98px){
-    .mainnav{transform:translateX(-13.8125rem);z-index:1002}}
 
 .mainnav__avatar {max-width: 60% !important}
 .mainnav__caption{color:#373c43} /* Styling of category titles in menu */
