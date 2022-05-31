@@ -1,14 +1,10 @@
+// Hide & Show main navigation menu using toggle
 $(function () { 
     $("#mainnavToggle").click(function (event) {
-      var screenWidth = window.innerWidth;
-      if (screenWidth < 992) {
-        if ( document.getElementById("mainnav-container").className.match(/(?:^|\s)mn-show(?!\S)/) ) {
-            console.log("Show is in mainnav");
-            document.getElementById("mainnav-container").className = document.getElementById("mainnav-container").className.replace( /(?:^|\s)mn-show(?!\S)/g , '' )
+        if ( document.getElementById("mainnav-container").className.match(/(?:^|\s)d-none(?!\S)/) ) {
+            document.getElementById("mainnav-container").className = document.getElementById("mainnav-container").className.replace( /(?:^|\s)d-none(?!\S)/g , '' )
         } else {
-            console.log("Show is not in mainnav");
-            document.getElementById("mainnav-container").className += " mn-show";
-        }
-      }
-    });
+            document.getElementById("mainnav-container").className += " d-none";
+            }
+      });
   });

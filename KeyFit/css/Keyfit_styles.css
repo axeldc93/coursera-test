@@ -217,61 +217,91 @@ body{
 @media(min-width:990px){
      .header__brand{margin-inline-end:0!important}}
 
+     .header__inner {padding-inline-start:0;}
+
 /*
 * A.3. Main navigation styling 
 */
 .mainnav{
     display:flex;
     grid-area:2/1/3/2;
-    max-width:13.75rem;
-    width: 0;
-}
-@media(min-width:250px){ /* Side navigator only appears if toggle button clicked on small screen sizes*/
-    .mainnav .mn-show{position:relative;width:13.75rem}
-    .mainnav__inner .mn-show{position:absolute}
-    .header__inner .mn-show {padding-inline-start:0;}
-    .header__content .mn-show{padding-inline-start:1.25rem}
-    .header__brand .mn-show{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}
+    position: relative;
 }
 
-@media(min-width:992px){ /* Side navigator appears all the time at large screen size */
-    .mainnav {position:relative;width:13.75rem}
+@media (max-width:768px){
+    .mainnav{
+        transform:translateX(0);
+        z-index:9999; 
+        width: calc(100vw);
+        box-shadow: 0 0 25px #1f3c5a;
+    }
     .mainnav__inner{position:absolute}
-    .header__inner {padding-inline-start:0;}
+    .mainnav__inner{height:100vh;position:sticky;top:0}
+    .mainnav__inner{background-color:#fff;color:#75868f;display:flex;flex-direction:column;height:100%;width:100%}
+    .mainnav__inner :where(h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6):not(.mainnav__caption){color:#373c43}
+    .mainnav__inner :where(.border-top,.border-end,.border-bottom,.border-start){border-color:#e1e2e3!important}
+    .mainnav__inner .dropdown-toggle:after{color:#373c43}
+    .mainnav__inner .text-muted{color:#c3c5c7!important}
+    .mainnav .scrollable-content{scrollbar-width:none}
+    .mainnav .mainnav__profile{display:none}
+    .mainnav .mainnav__category .mainnav__caption, .mainnav .mainnav__category .mn-icon{display:none}
+    .mainnav__top-content{display:flex;flex-direction:column;height:100%;overflow:auto;width:100%;padding-top: 2em}
+    .mainnav__top-content.os-host-overflow{overflow:visible}
+    .mainnav__bottom-content{background-color:#fff;bottom:0;margin-top:auto;position:sticky}
+    .mainnav__bottom-content,.mainnav__top-content{padding-inline:.75rem}
+    .mainnav__inner .mainnav__menu .nav-link{padding-block:.59rem; font-size: 2.5rem; text-align: center; border-bottom: 1px solid #8a929e}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link{display:flex}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link.active{background-color:#25476a;border-radius:.4375rem;box-shadow:none;color:#fff;font-weight:700}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link.active .nav-icon,.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active i{color:inherit!important}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link:not(.collapsed):not(.active){color:#25476a}
+    .root .mainnav__inner .nav-link{color:#75868f}
+    .root .mainnav__inner .nav-link.disabled{opacity:.4}
+    .root .mainnav__inner .nav-link:hover{color:#25476a}
+    .root .mainnav__inner .nav-link.active~.nav .active{color:#25476a}
+    .root .mainnav__inner .nav-link.active~.nav .active:hover{color:#25476a}
+    .root .mainnav__inner .nav-link .nav-icon,.root .mainnav__inner .nav-link i{color:#33475c!important}
+}
+@media (min-width:768px){
+    .mainnav{transform:translateX(0);z-index:9999; max-width:13.75rem; width: 13.75rem}
+    .mainnav__inner{position:absolute}
+    .mainnav__inner{height:100vh;position:sticky;top:0}
+    .mainnav__inner{background-color:#fff;color:#75868f;display:flex;flex-direction:column;height:100%;width:100%}
+    .mainnav__inner :where(h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6):not(.mainnav__caption){color:#373c43}
+    .mainnav__inner :where(.border-top,.border-end,.border-bottom,.border-start){border-color:#e1e2e3!important}
+    .mainnav__inner .dropdown-toggle:after{color:#373c43}.mainnav__inner .text-muted{color:#c3c5c7!important}
+    .mainnav .scrollable-content{scrollbar-width:none}
+    .mainnav__avatar.border{padding:.1rem}
+    .mainnav__top-content{display:flex;flex-direction:column;height:100%;overflow:auto;width:100%}
+    .mainnav__top-content.os-host-overflow{overflow:visible}
+    .mainnav__bottom-content{background-color:#fff;bottom:0;margin-top:auto;position:sticky}
+    .mainnav__bottom-content,.mainnav__top-content{padding-inline:.75rem}
+    .mainnav__avatar {max-width: 60% !important}
+    .mainnav__caption{color:#373c43} /* Styling of category titles in menu */
+    .mainnav__inner .mainnav__menu .nav-link{padding-block:.59rem}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link{display:flex}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link.active{background-color:#25476a;border-radius:.4375rem;box-shadow:none;color:#fff;font-weight:700}.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active .nav-icon,.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active i{color:inherit!important}
+    .mainnav__inner .mainnav__menu>.nav-item>.nav-link:not(.collapsed):not(.active){color:#25476a}
+    .root .mainnav__inner .nav-link{color:#75868f}
+    .root .mainnav__inner .nav-link.disabled{opacity:.4}
+    .root .mainnav__inner .nav-link:hover{color:#25476a}
+    .root .mainnav__inner .nav-link.active~.nav .active{color:#25476a}
+    .root .mainnav__inner .nav-link.active~.nav .active:hover{color:#25476a}
+    .root .mainnav__inner .nav-link .nav-icon,.root .mainnav__inner .nav-link i{color:#33475c!important}
+}
+
+@media(min-width:768px){
+    .mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}; 
+    .header__brand{padding-inline-start:1.25rem;max-width:13.75rem;width:100%;will-change:max-width}
+}
+@media(min-width:992px){
+    .mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}; 
     .header__content{padding-inline-start:1.25rem}
-    .header__brand{padding-inline-start:1.25rem;max-width:13.75rem;width:13.75rem;will-change:max-width}
+}
+@media(min-width:1200px){
+    .mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}
 }
 
 
-
-.mainnav .scrollable-content{scrollbar-width:none}
-.mainnav__inner{background-color:#fff;color:#75868f;display:flex;flex-direction:column;height:100%;width:100%}
-.mainnav__inner :where(h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6):not(.mainnav__caption){color:#373c43}
-.mainnav__inner :where(.border-top,.border-end,.border-bottom,.border-start){border-color:#e1e2e3!important}
-.mainnav__inner .dropdown-toggle:after{color:#373c43}.mainnav__inner .text-muted{color:#c3c5c7!important}
-.mainnav__avatar.border{padding:.1rem}
-.mainnav__top-content{display:flex;flex-direction:column;height:100%;overflow:auto;width:100%}
-.mainnav__top-content.os-host-overflow{overflow:visible}
-.mainnav__bottom-content{background-color:#fff;bottom:0;margin-top:auto;position:sticky}
-.mainnav__bottom-content,.mainnav__top-content{padding-inline:.75rem}
-@media(min-width:768px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
-@media(min-width:992px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
-@media(min-width:1200px){.mainnav__bottom-content,.mainnav__top-content{padding-inline:Max(.75rem,.25rem)}}
-.mainnav{transform:translateX(0);z-index:9999}
-.mainnav__inner{height:100vh;position:sticky;top:0}
-
-.mainnav__avatar {max-width: 60% !important}
-.mainnav__caption{color:#373c43} /* Styling of category titles in menu */
-.mainnav__inner .mainnav__menu .nav-link{padding-block:.59rem}
-.mainnav__inner .mainnav__menu>.nav-item>.nav-link{display:flex}
-.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active{background-color:#25476a;border-radius:.4375rem;box-shadow:none;color:#fff;font-weight:700}.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active .nav-icon,.mainnav__inner .mainnav__menu>.nav-item>.nav-link.active i{color:inherit!important}
-.mainnav__inner .mainnav__menu>.nav-item>.nav-link:not(.collapsed):not(.active){color:#25476a}
-.root .mainnav__inner .nav-link{color:#75868f}
-.root .mainnav__inner .nav-link.disabled{opacity:.4}
-.root .mainnav__inner .nav-link:hover{color:#25476a}
-.root .mainnav__inner .nav-link.active~.nav .active{color:#25476a}
-.root .mainnav__inner .nav-link.active~.nav .active:hover{color:#25476a}
-.root .mainnav__inner .nav-link .nav-icon,.root .mainnav__inner .nav-link i{color:#33475c!important}
 
 /*
 * Chart styling
